@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #F7F8FC;
+    --surface-card: #FFFFFF;
+    --text-primary: #171A2B;
+    --text-secondary: #687086;
+    --accent-primary: #625BF6;
+    --accent-hover: #5048E5;
+    --status-success: #16856B;
+    --status-warning: #D98A18;
+    --status-critical: #D9485F;
+    --border-color: #E7E9F1;
+    --sidebar-dark: #17182B;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F0F2F7;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1D5E4;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A6ACBE;
+}
+
+/* Premium Surface Utilities */
+.surface-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E7E9F1;
+  box-shadow: 0 1px 3px 0 rgba(23, 26, 43, 0.04), 0 1px 2px -1px rgba(23, 26, 43, 0.02);
+}
+
+.surface-card-hover {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.surface-card-hover:hover {
+  border-color: #D3D7E8;
+  box-shadow: 0 4px 12px -2px rgba(23, 26, 43, 0.06), 0 2px 6px -1px rgba(23, 26, 43, 0.04);
+}
+
+.sidebar-navy {
+  background-color: #17182B;
+}
+
+/* Focus Rings */
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid #625BF6;
+  outline-offset: 2px;
+}
